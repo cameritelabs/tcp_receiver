@@ -10,4 +10,4 @@ RUN pip install --upgrade pip
 RUN pip install -r requirements.txt
 
 
-CMD ["/usr/local/bin/python", "main.py"]
+CMD ["/usr/local/bin/python", " tcp_receiver.py"]
