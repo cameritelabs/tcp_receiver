@@ -13,9 +13,16 @@ A TCP server to receive messages managed by a http server.
 tcp-receiver is available on dockerhub. To run it, just execute:
 
 ```bash
-docker run -d -p 3003:3003 -p 9528:9528 cameritelabs/tcp-receiver:latest
+docker run -d -p 9950:9950 -p 9528:9528 cameritelabs/tcp-receiver:latest
 ```
 
+The TCP Server will be available on port 9950 while the HTTP Server will be available on port 9528.
+
+Use the route `GET /get_messages` to get all sent messages to the TCP server.
+
+Use the route `GET /pop_message` to get the first sent message and removed it from the server memory.
+
+Use the route `GET /reset_messages` to remove all messages from the memory and reset it to the initial state.
 
 ## Install 🤘
 
