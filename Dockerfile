@@ -9,5 +9,7 @@ WORKDIR /root/tcp_receiver
 RUN pip install --upgrade pip
 RUN pip install -r requirements.txt
 
+EXPOSE 9950
 
-CMD ["/usr/local/bin/python", "tcp_receiver.py"]
+
+CMD ["/usr/local/bin/python", "-u", "tcp_receiver.py"]
